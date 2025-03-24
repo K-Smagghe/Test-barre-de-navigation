@@ -1,0 +1,114 @@
+/* navigation latéral */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cssNavigationLateral {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #F5F1E3;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+}
+
+.cssNavigationLateral a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #111;
+    display: block;
+    transition: 0.3s;
+}
+
+.cssNavigationLateral a:hover {
+    color: #708D57;
+}
+
+.cssNavigationLateral ul {
+    list-style-type: none;
+
+}
+
+
+.cssNavigationLateral.active {
+    left: 0;
+}
+
+.cssNavigationLateral .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+}
+
+
+/* Menu pc */
+.menuPc {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    #jsOuvertureDuMenu {
+        display: none;
+    }
+
+    .cssNavigationLateral {
+        display: none;
+    }
+
+    .menuDesktop {
+        display: flex;
+        gap: 20px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menuDesktop li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+    .menuDesktop li a:hover {
+        color: #708D57;
+    }
+
+    .menuPc {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        flex-direction: row-reverse;
+        background-color: #F5F1E3;
+        margin: 0;
+        font-family: road Rage;
+    }
+
+    .road-rage-regular {
+        font-family: "Road Rage", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+    }
+
+
+}
